@@ -1,0 +1,16 @@
+public class Arreglo {
+    public static void main(String[] args) {
+        int[] arreglo = new int[100]; // Crear un arreglo de 100 elementos
+        final int constante = 1000;
+
+        // Asignar números del 1000 al 1099 en el arreglo
+        for (int x = 0; x < arreglo.length; x++) {
+            arreglo[x] = x + constante; // Llenar el arreglo
+        }
+
+        // Mostrar los valores del arreglo de 99 a 0
+        for (int x = 99; x >= 0; x--) {
+            System.out.println(arreglo[x]);
+        }
+    }
+}
