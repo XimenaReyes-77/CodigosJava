@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class TablasdeMultiplicar {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numero;
+        do {
+            System.out.println("Ingrese un número menor o igual que 20: ");
+            numero = scanner.nextInt();
+            if (numero > 20) {
+                System.out.println("Error: El número debe ser menor o igual a 20.");
+            }
+        } while (numero > 20);
+        System.out.println("Tabla de multiplicar del " + numero + ":");
+        for (int a = 1; a <= 10; a++) {
+            System.out.println(numero + " * " + a + " = " + (numero * a));
+        }
+        scanner.close(); 
+    }
+}
