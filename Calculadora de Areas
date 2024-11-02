@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class CalculadoraDeAreas {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int opcion = mostrarMenu(scanner);
+        
+        if (opcion >= 1 && opcion <= 4) {
+            double area = calcularArea(opcion, scanner);
+            System.out.println("El área es: " + area);
+        } else if (opcion == 5) {
+            System.out.println("Saliendo del programa...");
+        } else {
+            System.out.println("Opción no válida.");
+        }
+ 
+        scanner.close();
+        System.exit(0);
+    }
+    // Función para mostrar el menú y leer la opción seleccionada
+    public static int mostrarMenu(Scanner scanner) {
+        System.out.println("Menú de opciones:");
+        System.out.println("1. Triángulo");
+        System.out.println("2. Cuadrado");
+        System.out.println("3. Círculo");
+        System.out.println("4. Rectángulo");
+        System.out.println("5. Salir");
+        System.out.print("Seleccione una opción: ");
+        return scanner.nextInt();
+    }
+    // Función para calcular el área según la opción seleccionada
+    public static double calcularArea(int opcion, Scanner scanner) {
+        switch (opcion) {
+            case 1:
+                return (leerValor("base", scanner) * leerValor("altura", scanner)) / 2;
+            case 2:
+                return Math.pow(leerValor("lado", scanner), 2);
+            case 3:
+                return Math.PI * Math.pow(leerValor("radio", scanner), 2);
+            case 4:
+                return leerValor("base", scanner) * leerValor("altura", scanner);
+            default:
+                return 0;
+        }
+    }
+    // Función para leer los valores necesarios para el cálculo del área
+    public static double leerValor(String mensaje, Scanner scanner) {
+        System.out.print("Ingrese " + mensaje + ": ");
+        return scanner.nextDouble();
+    }
+} 
