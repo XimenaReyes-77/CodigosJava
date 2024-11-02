@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Cifras {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numero, cifras = 0;
+        System.out.println("Ingrese un número: ");
+        numero = scanner.nextInt();
+        // Convertimos a positivo para contar cifras en caso de número negativo
+        int numeroAbsoluto = Math.abs(numero);
+        // Caso especial para el número 0
+        if (numeroAbsoluto == 0) {
+            cifras = 1;
+        } else {
+            // Contamos las cifras dividiendo entre 10
+            while (numeroAbsoluto != 0) {
+                numeroAbsoluto /= 10;
+                cifras++;
+            }
+        }
+        System.out.println("La cantidad de cifras del número ingresado es: " + cifras);
+        scanner.close();
+    }
+}
