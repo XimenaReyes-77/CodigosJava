@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Númmayor {
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        int max; // Variable para almacenar el número mayor
+        System.out.println("Ingresar 5 números:");
+
+        // Leer el primer número y considerarlo inicialmente como el mayor
+        int a = leer.nextInt();
+        max = a;
+        // Leer los otros cuatro números
+        for (int i = 1; i < 5; i++) {
+            int numero = leer.nextInt(); // Leer el siguiente número
+            if (numero > max) {
+                max = numero; // Actualizar el mayor si se encuentra un número mayor
+            }
+        }
+        System.out.println("El número mayor es: " + max);
+        leer.close(); 
+    }
+}
