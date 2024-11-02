@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Arraylist {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> numList = new ArrayList<>();
+        int num;
+        int suma = 0;
+
+        System.out.println("Ingrese números enteros positivos (ingrese un número negativo para terminar): ");
+        
+        while (true) {
+            num = scanner.nextInt();
+         
+            if (num < 0) {
+                break; 
+            }
+            if (!numList.contains(num)) {
+                numList.add(num); 
+            } else {
+                System.out.println("El número " + num + " ya se ha ingresado. Intente con otro.");
+            }
+        }
+        for (Integer n : numList) {
+            suma += n;
+        }
+        System.out.println("Los números ingresados son: " + numList);
+        System.out.println("La suma de los números ingresados es: " + suma);
+        
+      scanner.close(); 
+    }
+}
