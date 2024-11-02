@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Calcular1 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num1, num2;
+        
+        System.out.println("Ingrese el primer número: ");
+        num1 = scanner.nextInt();
+        int triple = num1 * 3; // Calculamos el triple del primer número
+
+        System.out.println("Ingrese el segundo número: ");
+        num2 = scanner.nextInt();
+        int doble = num2 * 2; // Calculamos el doble del segundo número
+
+        int total = triple + doble; // Sumamos el triple y el doble
+        System.out.println("El triple de " + num1 + " es: " + triple);
+        System.out.println("El doble de " + num2 + " es: " + doble);
+        System.out.println("El resultado de la suma es: " + total);
+
+        scanner.close(); 
+    }
+}
