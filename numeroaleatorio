@@ -1,0 +1,10 @@
+public class GenerarNumeroAleatorio {
+    public static void main(String[] args) {
+        int x = generaNumeroAleatorio(500, 1000);
+        System.out.println(x);
+    }
+
+    public static int generaNumeroAleatorio(int valorMinimo, int valorMaximo) {
+        return (int) ((Math.random() * (valorMaximo - valorMinimo)) + valorMinimo);
+    }
+}
