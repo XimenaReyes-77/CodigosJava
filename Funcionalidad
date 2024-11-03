@@ -1,0 +1,14 @@
+public class funcionalidad {
+    static int funcionalidad1(){
+        return 1;
+    }
+    static int funcionalidad2(){
+        return 2;
+    }
+
+    public static void main(String[] args) throws Exception{
+        int variable1 = funcionalidad1();
+        int variable2 = funcionalidad2();
+        System.out.println(variable1 + " - " + variable2);
+    }
+}
