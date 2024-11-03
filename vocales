@@ -1,0 +1,36 @@
+class Personaje {
+    String name;
+
+    // Constructor
+    public Personaje(String name) {
+        this.name = name;
+    }
+}
+public class vocales {
+    public static void main(String[] args) {
+        Personaje[] personajes = {
+            new Personaje("Ana"),
+            new Personaje("Carlos"),
+            new Personaje("Beatriz"),
+            new Personaje("Ximena"),
+            new Personaje("Jared")
+        };
+
+        int contador = 0;
+        char caracter;
+
+        for (int x = 0; x < personajes.length; x++) {
+            System.out.println("Nombre: " + personajes[x].name);
+            System.out.println("Longitud del nombre: " + personajes[x].name.length());
+
+            for (int y = 0; y < personajes[x].name.length(); y++) {
+                caracter = personajes[x].name.charAt(y);
+
+                if ("aeiou".contains(String.valueOf(Character.toLowerCase(caracter)))) {
+                    contador++;
+                }
+            }
+        }
+        System.out.println("Total de vocales en los nombres: " + contador);
+    }
+}
