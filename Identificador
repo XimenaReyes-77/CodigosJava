@@ -1,0 +1,15 @@
+public class Identificador2 {
+    public static void main(String[] args) {
+        Object objeto;
+        String palabra = "Mañana no hya clases!!!!!";
+                palabra = "Mañana no hya clases!!!!! nos vemos el lunes!!";
+        float numero = 8945.6f;
+        Double numeroDouble = 468311.6321353;
+        objeto = palabra;
+        objeto = numero; 
+        objeto = numeroDouble;
+
+    System.out.println(objeto);
+
+    }
+}
