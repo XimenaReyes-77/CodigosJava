@@ -1,0 +1,16 @@
+public class Multiplo {
+    public static void main(String[] args) {
+        int contador = 0; // Contador para los múltiplos de 15
+
+        System.out.println("Estos son los números múltiplos de 3 y 5 menores de 1000:");
+
+        for (int a = 0; a < 1000; a++) {
+            if (a % 15 == 0) { // Verificamos si es múltiplo de 3 y 5
+                System.out.println("--> Múltiplo de 3 y 5: " + a);
+                contador++; // Incrementamos el contador
+            }
+        }
+
+        System.out.println("Total de múltiplos de 3 y 5 menores de 1000: " + contador);
+    }
+}
