@@ -1,0 +1,11 @@
+public class Arreglo2 {
+    public static void main(String[] args) {
+        String[] nombre = new String[5];
+        nombre[0] = "Fernando Zamudio";
+        nombre[1] = "Hector Castro";
+        nombre[3] = "Daniel Chaidez";
+        nombre[4] = "Ximena Reyes";
+
+        System.out.println(nombre);
+    }
+}
