@@ -1,0 +1,7 @@
+public class texto {
+    public static void main(String[] args) {
+        String texto = "Parangaricutirimicuaro";
+        String nuevoTexto = texto.replace("a", "@");
+        System.out.println(nuevoTexto);
+    }
+}
