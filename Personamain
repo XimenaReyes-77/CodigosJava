@@ -1,0 +1,27 @@
+import java.util.Arrays;
+
+class Persona {
+    String nombre;
+    int edad;
+
+    // Sobrescribimos el método toString para imprimir los datos de la persona
+    @Override
+    public String toString() {
+        return "Persona{nombre='" + nombre + "', edad=" + edad + "}";
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Persona p1 = new Persona(); // Ximena - 18
+        p1.nombre = "Ximena";
+        p1.edad = 18;
+
+        Persona p2 = new Persona(); // Jared - 17
+        p2.nombre = "Jared";
+        p2.edad = 17;
+
+        Persona[] personas = {p1, p2};
+
+        System.err.println(Arrays.toString(personas));
+    }
+}
