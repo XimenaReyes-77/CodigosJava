@@ -1,0 +1,17 @@
+import java.util.Scanner;
+ 
+public class Calificaciones {
+     public static void main(String[] args) {
+         int calificacion;
+          
+         Scanner scan = new Scanner(System.in);
+         System.out.println("Escribe la Calficacion (0-100)");
+         calificacion = scan.nextInt();
+         if (calificacion >= 70){
+            System.out.println("Aprobado");
+         } else{
+            System.out.println("Reprobado");
+         }
+         scan.close();
+     }
+}
