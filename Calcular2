@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Calcular2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int suma, doble, numero;
+
+        // Solicitar un número menor a 100
+        do {
+            System.out.println("Ingrese un número menor a 100: ");
+            numero = scanner.nextInt();
+            if (numero >= 100) {
+                System.out.println("Error: Ingrese un número menor a 100.");
+            }
+        } while (numero >= 100);
+        // Calcular la suma de 1 hasta el número ingresado
+        suma = 0;
+        for (int b = 1; b <= numero; b++) {
+            suma += b;
+        }
+        doble = suma * 2;
+        System.out.println("El total es: " + doble);
+    
+        scanner.close(); 
+    }
+}
