@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+public class Arraylist_2 {
+    @Override
+    public String toString() {
+        return "Arraylist_2 []";
+    }
+    @SuppressWarnings("unchecked")
+    public static void main(String[] args) {
+        @SuppressWarnings("rawtypes")
+        ArrayList arraylist = new ArrayList<>();
+        arraylist.add(10);
+        arraylist.add(20);
+        arraylist.add(30);
+        System.out.println(arraylist);
+    }
+}
