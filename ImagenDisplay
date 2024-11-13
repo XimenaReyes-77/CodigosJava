@@ -1,0 +1,39 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URL;
+import javax.imageio.ImageIO;
+
+public class ImageDisplay {
+    public static void showImageFromUrl(String imageUrl) {
+        try {
+            // Crear un URI y convertirlo a URL
+            URI uri = URI.create(imageUrl);
+            URL url = uri.toURL(); // Conversión de URI a URL
+            
+            BufferedImage image = ImageIO.read(url);
+            
+            // Crear un marco y mostrar la imagen
+            JFrame frame = new JFrame();
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(new Dimension(image.getWidth(), image.getHeight()));
+            
+            JLabel label = new JLabel(new ImageIcon(image));
+            frame.add(label);
+            
+            frame.pack();
+            frame.setVisible(true);
+        } catch (IOException e) {
+            System.err.println("Error al cargar la imagen: " + e.getMessage());
+        } catch (IllegalArgumentException e) {
+            System.err.println("URL inválida: " + e.getMessage());
+        }
+    }
+
+    public static void main(String[] args) {
+        String url = "https://i.pinimg.com/736x/41/bb/bd/41bbbd65509a9828c1e38c3b370c4a28.jpg"; // Reemplazar con una URL válida
+        showImageFromUrl(url);
+    }
+}
