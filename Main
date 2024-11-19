@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        // Declaración del arreglo de tipo Object, con diferentes tipos de datos
+        Object[] arreglo = { 10.55, true, "Lunes", 5.5f, 45, 's' };
+        
+        // Primer bucle: uso de for clásico para recorrer el arreglo
+        System.out.println("Recorrido con for clásico:");
+        for (int x = 0; x < arreglo.length; x++) {
+            System.out.println(arreglo[x]);
+        }
+        
+        // Segundo bucle: uso de for-each para recorrer el arreglo
+        System.out.println("\nRecorrido con for-each:");
+        for (Object o : arreglo) {
+            System.out.println(o);
+        }
+    }
+}
