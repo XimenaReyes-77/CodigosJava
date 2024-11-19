@@ -1,11 +1,12 @@
 package Aplicacion;
 
-public class LeerApp {
+public class App3 {
     public static void main(String[] args) {
+        // Ejecutar un modulo.
         Leer moduloLeer = new Leer();
         String texto = moduloLeer.LeerTexto();
-System.out.println("Escribiste " + texto);
-int numero = moduloLeer.LeerNumeroEntero();
-System.out.println("Escribiste el numero " + numero);
-}
+        System.out.println("Escribiste " + texto);
+        int numero = moduloLeer.LeerNumeroEntero();
+        System.out.println("Escribiste el numero " + numero);
+    }
 }
