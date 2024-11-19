@@ -1,0 +1,11 @@
+public class calcularCubo {
+    public static void main(String[] args) {
+        double numero = 15.0;
+        double resultado = calcularCubo(numero);
+        System.out.println("El cubo de " + numero + " es: " + resultado);
+    }
+    
+    public static double calcularCubo(double numero) {
+        return numero * numero * numero;
+    }
+} 
