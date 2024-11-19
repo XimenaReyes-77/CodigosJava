@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class RickyandMorty {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        try {
+            // Solicitar el ID del personaje
+            System.out.println("Ingrese el ID del personaje que deseas conocer (entre el 1 y el 826):");
+            int personajeId = scn.nextInt();
+
+            // Validar el rango del ID
+            if (personajeId < 1 || personajeId > 826) {
+                System.out.println("Error: El ID debe estar entre 1 y 826.");
+                return;
+            }
+
+            // Obtener los detalles del personaje usando la API
+            character character = ApiUtil.getCharacterById(personajeId);
+
+            // Validar si el personaje existe
+            if (character == null) {
+                System.out.println("Error: No se encontró un personaje con el ID proporcionado.");
+                return;
+            }
+
+            // Mostrar detalles del personaje
+            System.out.println("Nombre: " + character.name.replace("\"", ""));
+            System.out.println("Estado: " + character.status.replace("\"", ""));
+            System.out.println("Capítulos: " + character.episode.size());
+            System.out.println("Imagen: " + character.image);
+        } catch (Exception e) {
+            // Manejo de errores generales
+            System.out.println("Error: Entrada no válida. Por favor, ingrese un número entero.");
+        } finally {
+            // Cerrar el escáner
+            scn.close();
+        }
+    }
+}
