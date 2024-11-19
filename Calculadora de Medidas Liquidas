@@ -1,0 +1,74 @@
+import java.util.Scanner;
+
+public class CalculadoraMedidasLiquidas {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Calculadora de Medidas Líquidas");
+        System.out.println("Unidades disponibles: onza, litro, mililitro, galon, taza");
+        
+        System.out.print("Introduce la unidad de origen: ");
+        String unidadOrigen = scanner.next().toLowerCase();
+
+        System.out.print("Introduce la unidad de destino: ");
+        String unidadDestino = scanner.next().toLowerCase();
+
+        System.out.print("Introduce la cantidad a convertir: ");
+        double cantidad = scanner.nextDouble();
+
+        double resultado = convertir(cantidad, unidadOrigen, unidadDestino);
+
+        if (resultado != -1) {
+            System.out.println("El resultado es: " + resultado + " " + unidadDestino + "(s).");
+        } else {
+            System.out.println("Unidades no válidas. Por favor, verifica las unidades ingresadas.");
+        }
+
+        scanner.close();
+    }
+
+    public static double convertir(double cantidad, String unidadOrigen, String unidadDestino) {
+
+        double cantidadEnMililitros = convertirAMililitros(cantidad, unidadOrigen);
+
+        if (cantidadEnMililitros == -1) {
+            return -1; // Unidad de origen no válida
+        }
+
+        return convertirDesdeMililitros(cantidadEnMililitros, unidadDestino);
+    }
+
+    public static double convertirAMililitros(double cantidad, String unidad) {
+        switch (unidad) {
+            case "onza":
+                return cantidad * 29.5735;
+            case "litro":
+                return cantidad * 1000;
+            case "mililitro":
+                return cantidad;
+            case "galon":
+                return cantidad * 3785.41;
+            case "taza":
+                return cantidad * 240;
+            default:
+                return -1; // Unidad no válida
+        }
+    }
+
+    public static double convertirDesdeMililitros(double cantidad, String unidad) {
+        switch (unidad) {
+            case "onza":
+                return cantidad / 29.5735;
+            case "litro":
+                return cantidad / 1000;
+            case "mililitro":
+                return cantidad;
+            case "galon":
+                return cantidad / 3785.41;
+            case "taza":
+                return cantidad / 240;
+            default:
+                return -1; // Unidad no válida
+        }
+    }
+}
