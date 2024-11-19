@@ -1,4 +1,4 @@
-public class Identificador2 {
+public class Identificador {
     public static void main(String[] args) {
         Object objeto;
         String palabra = "Mañana no hya clases!!!!!";
