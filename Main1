@@ -1,0 +1,12 @@
+public class Main1 {
+    public static void main(String[] args) {
+        int[] arregloEnteros = {5, 5, 7, 3, 9};
+        Object[] arregloObjetos = {1, "a", 2, "b", 1, "a", 3};
+        //la función sumarValores
+        int suma = OperacionesArreglo.sumarValores(arregloEnteros);
+        System.out.println("Suma de valores: " + suma);
+        //  la función valoresUnicos
+        int unicos = OperacionesArreglo.valoresUnicos(arregloObjetos);
+        System.out.println("Cantidad de valores únicos: " + unicos);
+    }
+}
