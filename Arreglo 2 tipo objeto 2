@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+
+public class Objecto2 {
+
+	public static void main(String[] args) {
+		Object[] arreglo = new Object[1000];
+		arreglo[0] = "Perrito";
+		arreglo[1] = 25.66;
+		arreglo[2] = true;
+		arreglo[3] = 55;
+		String nombre = "José";
+		ArrayList<Integer> arrayList = new ArrayList<>();
+		arrayList.add(10);
+		arrayList.add(20);
+		arrayList.add(30);
+		for (Integer valor : arrayList) {
+		}
+		System.out.println(arrayList.contains(20));
+  }
+}
