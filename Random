@@ -1,0 +1,11 @@
+package lib;
+import java.util.Random;
+
+public class Random_ {
+
+	public static void main(String[] args) {
+		Random r = new Random();
+		double x = r.nextDouble();
+		System.out.println(x);
+	}
+}
