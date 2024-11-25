@@ -1,0 +1,22 @@
+import java.util.HashSet;
+
+public class OperacionesArreglo {
+
+    // Método para sumar todos los valores de un arreglo de enteros
+    public static int sumarValores(int[] arreglo) {
+        int suma = 0;
+        for (int num : arreglo) {
+            suma += num;
+        }
+        return suma;
+    }
+
+    // Método para contar valores únicos en un arreglo de objetos
+    public static int valoresUnicos(Object[] arreglo) {
+        HashSet<Object> elementosUnicos = new HashSet<>();
+        for (Object elemento : arreglo) {
+            elementosUnicos.add(elemento);
+        }
+        return elementosUnicos.size();
+    }
+}
