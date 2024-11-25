@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Sueldo {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese su sueldo inicial: ");
+        double sueldoMayor = scanner.nextDouble();
+
+        System.out.println("¿Cuántos sueldos más desea ingresar?");
+        int cantidadSueldos = scanner.nextInt();
+        if (cantidadSueldos < 0) {
+            System.out.println("La cantidad de sueldos no puede ser negativa.");
+        } else {
+            for (int x = 1; x <= cantidadSueldos; x++) {
+                System.out.println("Ingrese el sueldo " + x + ": ");
+                double sueldo = scanner.nextDouble();
+                if (sueldo > sueldoMayor) {
+                    sueldoMayor = sueldo;
+                }
+            }
+            System.out.println("El sueldo mayor es $ " + sueldoMayor);
+        }
+        scanner.close();
+    }
+}
